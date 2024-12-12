@@ -1,0 +1,23 @@
+server:
+  port: 7081
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://20.187.99.38:3306/test_db?serverTimezone=GMT
+      username: root
+      password: jie135920  #yml????????????????????????????????
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: 1ms
+        min-idle: 0
+        max-idle: 4
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
